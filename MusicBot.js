@@ -232,4 +232,4 @@ function play(guild, song) {
 serverQueue.textChannel.send({embed : embed})
 }
 
-client.login(TOKEN);
+client.login(process.env.BOT_TOKEN);
