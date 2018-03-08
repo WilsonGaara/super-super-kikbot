@@ -89,6 +89,9 @@ msg.channel.send({embed: embed})
 		serverQueue.connection.dispatcher.end('Ok... Pulando a primeira música da lista. `queue`');
 		return undefined;
 	
+	
+	
+	
 	} else if (command === `ping`) {
 		if(Math.round(client.ping) < 75) return msg.channel.send(':ping_pong: l Ping:  ' +   '`' + Math.round(client.ping) +  '`' + '\nStatus: Ótimo, Shard trabalhando como nunca. 😃') 
 	
@@ -97,6 +100,18 @@ msg.channel.send({embed: embed})
 				msg.channel.send(':ping_pong: l Ping:  ' +   '`' + Math.round(client.ping) +  '`' + '\n Tudo operacional, shard funcionando normalmente com um pouco de delay. ✅') 
 		return undefined;
 
+  } else if (command === `status`) {
+  const Discordst = require('discord.js');
+
+
+         const embed = new Discordst.RichEmbed()
+		 .setAuthor(`Meus status`, client.user.avatarURL)
+         .setDescription('**SHARD2 - Música**/nUso de memória RAM: ' + `**${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB**` + '\nUso de Processador(CPU): ' + `**${(process.cpuUsage().user / 1024 / 1024).toFixed(2)}%**`)
+        .setColor(`GOLD`)
+        .setFooter(`© KikBot 2018 l Informação - ` + `${moment().format('LLLL')}`, client.user.avatarURL)
+         
+     msg.channel.send({embed: embed})
+return undefined;
 	} else if (command === `stop`) {
 		if (!msg.member.voiceChannel) return msg.channel.send(':x: **l** Você não ficou em um canal de voz!');
 		if (!serverQueue) return msg.channel.send('Nada tocando...');
