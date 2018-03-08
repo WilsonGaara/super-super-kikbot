@@ -163,6 +163,10 @@ return undefined;
 			return msg.channel.send(`⏸ Pausei a música para você`);
 		}
 		return msg.channel.send('🇽 **l** Nada tocando.');
+		} else if (command === `reload`) {
+		if(!message.author.id != 315307066376060959) return 
+process.exit()
+return undefined;
 	} else if (command === `resume`) {
 		if (serverQueue && !serverQueue.playing) {
 			serverQueue.playing = true;
