@@ -106,7 +106,7 @@ msg.channel.send({embed: embed})
 
          const embed = new Discordst.RichEmbed()
 		 .setAuthor(`Meus status`, client.user.avatarURL)
-         .setDescription('**SHARD2 - Música** \nUso de memória RAM: ' + `**${(process.memoryUsage().heapUsed / 512 / 512).toFixed(2)}MB**` + '\nUso de Processador(CPU): ' + `**${(process.cpuUsage().user / 100 / 100).toFixed(2)}%**`)
+         .setDescription('**SHARD2 - Música** \nUso de memória RAM: ' + `**${(process.memoryUsage().heapUsed / 512 / 512).toFixed(2)}MB**` + '\nUso de Processador(CPU): ' + `**${(process.cpuUsage().user / 512 / 512).toFixed(2)}%**`)
         .setColor(`GOLD`)
         .setFooter(`© KikBot 2018 l Informação - ` + `${moment().format('LLLL')}`, client.user.avatarURL)
          
