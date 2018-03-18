@@ -2,4 +2,4 @@
 
 exports.PREFIX = 'k!';
 
-exports.GOOGLE_API_KEY = 'AIzaSyCuyhLFOFq-5phxeH7iqEr8I6KmCmFq3q4';
+exports.GOOGLE_API_KEY = 'process.env.GOOGLE';
